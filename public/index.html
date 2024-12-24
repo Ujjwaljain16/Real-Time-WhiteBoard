@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Whiteboard</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Collaborative Whiteboard</h1>
+        <div class="toolbar">
+            <button class="tool-btn active" data-tool="pencil">✏️ Pencil</button>
+            <button class="tool-btn" data-tool="eraser">🗑️ Eraser</button>
+            <button class="tool-btn" data-tool="rectangle">⬜ Rectangle</button>
+            <button class="tool-btn" data-tool="circle">⭕ Circle</button>
+            <button class="tool-btn" data-tool="text">📝 Text</button>
+            <input type="color" class="color-picker" value="#000000">
+            <input type="range" class="size-slider" min="1" max="20" value="2">
+            <button class="tool-btn" id="voiceBtn">🎤 Voice Note</button>
+            <button class="tool-btn" id="saveBtn">💾 Save</button>
+            <button class="tool-btn" id="clearBtn">🗑️ Clear All</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <div class="side-panel">
+            <div class="participants">
+                <h3>Participants</h3>
+                <div class="participant">
+                    <div class="participant-avatar"></div>
+                    <span>You</span>
+                </div>
+            </div>
+            
+            <div class="chat">
+                <h3>Chat</h3>
+                <div class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type a message...">
+                    <button>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="voice-recording">
+        <span>Recording... </span>
+        <button id="stopRecording">Stop</button>
+    </div>
+
+    <div class="modal" id="textModal">
+        <div class="modal-content">
+            <h2>Add Text</h2>
+            <input type="text" id="textInput" placeholder="Enter your text">
+            <button id="addText">Add</button>
+            <button id="cancelText">Cancel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
