@@ -1,8 +1,7 @@
 {
-  "name": "realtime-whiteboard",
-  "version": "1.0.0",
+  "name": "whiteboard",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
